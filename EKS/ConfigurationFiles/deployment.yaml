@@ -1,19 +1,15 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-  name: nginx
+  name: apache
+  labels:
+    app: apache
 spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
   selector:
-    matchLabels:
-      app: nginx
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx
-        ports:
-        - containerPort: 80
+    app: apache
+  type: LoadBalancer
