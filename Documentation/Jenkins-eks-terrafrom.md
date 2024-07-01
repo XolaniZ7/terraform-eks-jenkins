@@ -78,7 +78,7 @@ Service.yaml - This Kubernetes YAML configuration defines a Service named nginx 
             o	Ports: Specifies that the Service listens on port 80 (http) and forwards traffic to targetPort 80 on the NGINX Pods using TCP protocol.
             o	Selector: Routes traffic to Pods with the label app: nginx.
             o	Type: Specifies the type of Service as LoadBalancer, allowing external traffic from outside the Kubernetes cluster to access NGINX.
-            
+
 
 Jenkins Installation Script:
 
