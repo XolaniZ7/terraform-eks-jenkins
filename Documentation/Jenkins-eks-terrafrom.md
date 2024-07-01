@@ -61,7 +61,9 @@ Deployment.yaml - This Kubernetes YAML configuration defines a Deployment named 
 
                     	Metadata: Sets the label app: nginx for Pods created by this Deployment.
                     	Spec: Specifies the configuration of the NGINX container within the Pod.
+
                         	Containers: Configures the NGINX container.
+                        
                             	Name: Specifies the name of the container as nginx.
                             	Image: Specifies the Docker image (nginx) used for the container.
                             	Ports: Specifies that the container listens on port 80.
