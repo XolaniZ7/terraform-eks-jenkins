@@ -20,13 +20,17 @@ Jenkins-server Terraform Configuration:
             o	Creates a VPC with a specified CIDR block, availability zones, and public subnets.
             o	Defines a security group for Jenkins with ingress rules allowing HTTP (port 8080) and SSH (port 22) from any IP, and egress rules allowing all outbound traffic.
             o	Launches an EC2 instance for Jenkins, specifying instance type, key pair, security group, subnet, public IP, and user data script.
+
     •	Terraform.tfvars: Configuration for deploying a VPC, subnets, and EC2 instance type for Jenkins.
 
 EKS Terraform Configuration:
 
 VPC Module
+
     •	Purpose: Sets up a VPC (jenkins-vpc) with public and private subnets suitable for hosting resources, particularly an EKS cluster.
+
     •	Key Configurations:
+    
             o	Name and CIDR: Defines the VPC name and its CIDR block (var.vpc_cidr).
             o	Availability Zones: Retrieves available AZs for subnet placement.
             o	Subnets: Defines private and public subnets (var.private_subnets and var.public_subnets).
