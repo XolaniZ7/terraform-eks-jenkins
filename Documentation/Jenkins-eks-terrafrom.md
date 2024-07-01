@@ -30,7 +30,7 @@ VPC Module
     •	Purpose: Sets up a VPC (jenkins-vpc) with public and private subnets suitable for hosting resources, particularly an EKS cluster.
 
     •	Key Configurations:
-    
+
             o	Name and CIDR: Defines the VPC name and its CIDR block (var.vpc_cidr).
             o	Availability Zones: Retrieves available AZs for subnet placement.
             o	Subnets: Defines private and public subnets (var.private_subnets and var.public_subnets).
@@ -38,7 +38,9 @@ VPC Module
             o	NAT Gateway: Configures a single NAT Gateway for private subnet internet access.
 
 EKS Module
+
     •	Purpose: Deploys an EKS cluster (my-eks-cluster) using the terraform-aws-modules/eks/aws module.
+    
     •	Key Configurations:
             o	Cluster Endpoint Access: Enables public access to the EKS cluster endpoint.
             o	Cluster Name and Version: Defines the EKS cluster name (my-eks-cluster) and version (1.29).
