@@ -40,7 +40,7 @@ VPC Module
 EKS Module
 
     •	Purpose: Deploys an EKS cluster (my-eks-cluster) using the terraform-aws-modules/eks/aws module.
-    
+
     •	Key Configurations:
             o	Cluster Endpoint Access: Enables public access to the EKS cluster endpoint.
             o	Cluster Name and Version: Defines the EKS cluster name (my-eks-cluster) and version (1.29).
@@ -50,11 +50,15 @@ EKS Module
 ConfigurationFiles:
 
 Deployment.yaml - This Kubernetes YAML configuration defines a Deployment named nginx that manages a single instance of the NGINX web server container.
+
     •	Deployment: Manages the lifecycle and scaling of the NGINX container.
+
             o	Replicas: Specifies one replica, meaning one instance of the NGINX container will be running.
             o	Selector: Defines how the Deployment selects which Pods to manage.
+
                 	MatchLabels: Matches Pods with the label app: nginx.
             o	Template: Describes the Pods managed by the Deployment.
+            
                 	Metadata: Sets the label app: nginx for Pods created by this Deployment.
                 	Spec: Specifies the configuration of the NGINX container within the Pod.
                     	Containers: Configures the NGINX container.
