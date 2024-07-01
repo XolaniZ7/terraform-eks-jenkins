@@ -1,6 +1,7 @@
 Deploying EKS Cluster with Terraform.
 
 Tools Used:
+
     •	Jenkins: CI/CD automation server for orchestrating the pipeline.
 
     •	Terraform: Infrastructure as Code tool for provisioning AWS resources like VPC, subnets, security groups, and EKS clusters.
@@ -14,7 +15,7 @@ Jenkins-server Terraform Configuration:
     •	Data.tf: Dynamically provisions AWS resources using the latest Amazon Linux 2 AMI and available AZs.
 
     •	Jenkins-install.sh: EC2 user data script that installs Jenkins, git, Terraform, and kubectl when the server boots up.
-    
+
     •	Main.tf:
             o	Creates a VPC with a specified CIDR block, availability zones, and public subnets.
             o	Defines a security group for Jenkins with ingress rules allowing HTTP (port 8080) and SSH (port 22) from any IP, and egress rules allowing all outbound traffic.
