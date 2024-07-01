@@ -55,10 +55,9 @@ Deployment.yaml - This Kubernetes YAML configuration defines a Deployment named 
 
             o	Replicas: Specifies one replica, meaning one instance of the NGINX container will be running.
             o	Selector: Defines how the Deployment selects which Pods to manage.
-
-                	MatchLabels: Matches Pods with the label app: nginx.
+                    	MatchLabels: Matches Pods with the label app: nginx.
             o	Template: Describes the Pods managed by the Deployment.
-            
+
                 	Metadata: Sets the label app: nginx for Pods created by this Deployment.
                 	Spec: Specifies the configuration of the NGINX container within the Pod.
                     	Containers: Configures the NGINX container.
