@@ -55,15 +55,16 @@ Deployment.yaml - This Kubernetes YAML configuration defines a Deployment named 
 
             o	Replicas: Specifies one replica, meaning one instance of the NGINX container will be running.
             o	Selector: Defines how the Deployment selects which Pods to manage.
+            
                     	MatchLabels: Matches Pods with the label app: nginx.
             o	Template: Describes the Pods managed by the Deployment.
 
-                	Metadata: Sets the label app: nginx for Pods created by this Deployment.
-                	Spec: Specifies the configuration of the NGINX container within the Pod.
-                    	Containers: Configures the NGINX container.
-                        	Name: Specifies the name of the container as nginx.
-                        	Image: Specifies the Docker image (nginx) used for the container.
-                        	Ports: Specifies that the container listens on port 80.
+                    	Metadata: Sets the label app: nginx for Pods created by this Deployment.
+                    	Spec: Specifies the configuration of the NGINX container within the Pod.
+                        	Containers: Configures the NGINX container.
+                            	Name: Specifies the name of the container as nginx.
+                            	Image: Specifies the Docker image (nginx) used for the container.
+                            	Ports: Specifies that the container listens on port 80.
 Service.yaml - This Kubernetes YAML configuration defines a Service named nginx that exposes the NGINX deployment to the outside world using a LoadBalancer.
     •	Service: Defines networking rules to access NGINX Pods (app: nginx).
             o	Name: Specifies the name of the Service as nginx.
