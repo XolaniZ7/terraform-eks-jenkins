@@ -63,18 +63,22 @@ Deployment.yaml - This Kubernetes YAML configuration defines a Deployment named 
                     	Spec: Specifies the configuration of the NGINX container within the Pod.
 
                         	Containers: Configures the NGINX container.
-                        
+
                             	Name: Specifies the name of the container as nginx.
                             	Image: Specifies the Docker image (nginx) used for the container.
                             	Ports: Specifies that the container listens on port 80.
+
 Service.yaml - This Kubernetes YAML configuration defines a Service named nginx that exposes the NGINX deployment to the outside world using a LoadBalancer.
+
     •	Service: Defines networking rules to access NGINX Pods (app: nginx).
             o	Name: Specifies the name of the Service as nginx.
             o	Labels: Adds the label app: nginx to the Service.
+
     •	Spec:
             o	Ports: Specifies that the Service listens on port 80 (http) and forwards traffic to targetPort 80 on the NGINX Pods using TCP protocol.
             o	Selector: Routes traffic to Pods with the label app: nginx.
             o	Type: Specifies the type of Service as LoadBalancer, allowing external traffic from outside the Kubernetes cluster to access NGINX.
+            
 
 Jenkins Installation Script:
 
